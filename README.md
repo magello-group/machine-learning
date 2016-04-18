@@ -4,6 +4,7 @@ Machine Learning Meetup
 In this tutoria we will use the following development tools:
 
  * Python 2.7.x
+ * Numpy 1.x
  * OpenCV 3.x
 
 ## installation
@@ -34,9 +35,3 @@ We recommend installing Python and OpenCV using homebrew.
 If it doesn't work, try opening a new shell to make sure that the right defaults have been loaded!
 
 If it still doesn't work, please contact us so we can help!
-
-
- 
-
-
- 
