@@ -1,7 +1,7 @@
 # machine-learning
 Machine Learning Meetup
 
-In this tutoria we will use the following development tools:
+In this tutorial we will use the following development tools:
 
  * Python 2.7.x
  * Numpy 1.x
