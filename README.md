@@ -32,7 +32,7 @@ We recommend installing Python and OpenCV using homebrew.
 
  * Run: 'python'
  * Type: 'import cv2'
- * Type: 'cv2.__version__'
+ * Type: 'cv2.\_\_version\_\_'
  * The result should be the version of OpenCV currently installed (3.x)
 
 If it doesn't work, try opening a new shell to make sure that the right defaults have been loaded!
