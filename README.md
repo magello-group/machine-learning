@@ -21,10 +21,12 @@ We recommend installing Python and OpenCV using homebrew.
  1. Install homebrew from: http://brew.sh/
  2. Install python: 'brew install python'
  3. Open a new shell (to upgrade the path and environment)
- 4. Upgrade pip 'pip install --upgrade pip'
- 5. Install science tap in homebrew: 'brew tap homebrew/science/'
- 5. Install OpenCV: 'brew install opencv3'
- 6. Install OpenCV python extensions: 'echo /usr/local/opt/opencv3/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv3.pth'
+ 4. Type: 'which python'
+ 5. Make sure that the response is: 'usr/local/bin/python', otherwise retry...
+ 6. Upgrade pip 'pip install --upgrade pip'
+ 7. Install science tap in homebrew: 'brew tap homebrew/science/'
+ 8. Install OpenCV: 'brew install opencv3'
+ 9. Install OpenCV python extensions: 'echo /usr/local/opt/opencv3/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv3.pth'
 
 ## Test installation
 
