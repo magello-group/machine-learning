@@ -12,7 +12,10 @@ In this tutorial we will use the following development tools:
 ### Windows
 
  1. Download the latest Python 2.7 Windows installer from https://www.python.org/downloads/release/python-2711/
- 2. To be continued...
+ 2. Install numpy: 'pip install numpy'
+ 3. Download and install the latest OpenCV distribution from here: http://opencv.org/downloads.html
+ 4. Manually copy the file opencv\build\python\2.7\xNN\cv2.pyd to the Lib\site-packages\ directory of your Python installation (where xXX is x86 or x64)
+ 5. Verify the installation (instructions below)
  
 ### Mac
 
@@ -27,8 +30,9 @@ We recommend installing Python and OpenCV using homebrew.
  7. Install science tap in homebrew: 'brew tap homebrew/science/'
  8. Install OpenCV: 'brew install opencv3'
  9. Install OpenCV python extensions: 'echo /usr/local/opt/opencv3/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv3.pth'
+ 10. Verify the installation (instructions below)
 
-## Test installation
+## Verify installation
 
  * Run: 'python'
  * Type: 'import cv2'
