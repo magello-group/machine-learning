@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
 	# train set
     C = 1.0  # SVM regularization parameter
-    svc = svm.SVC(kernel='gamma', C=C).fit(X_train, Y_train)
+    svc = svm.SVC(kernel='rbf', C=C).fit(X_train, Y_train)
     print 'type(svc)=', type(svc)
     print 'svc=',svc
 
