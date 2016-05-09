@@ -11,11 +11,13 @@ In this tutorial we will use the following development tools:
 
 ### Windows
 
- 1. Download the latest Python 2.7 Windows installer from https://www.python.org/downloads/release/python-2711/
+ 1. If you have any existing versions of Python installed, please do not use any of these. Particularly if you have set Windows environment variables such as PYTHON_HOME or PATH 
+    to work with Python globally, you might need to remove these to avoid conflicts with existing Python versions. The bits are also important - due to the Fortran compiled libs of 
+    scipy, the 32 bit version of Anaconda is very unlikely to work on a 64 bit machine.     
  2. Install Anaconda (contains numpy, scipy and scikit): https://www.continuum.io/downloads/
  3. From now on, you  need to use the python.exe provided by anaconda. You can choose between calling anacondas python.exe directly with parameters from its folder, 
-    or set the global PYTHON_HOME the directory <PathToAnacondaRoot> where anacondas python.exe resides, as well as adding <PathToAnacondaRoot> and <PathToAnacondaRoot>/Scripts 
-    to the Windows PATH variable.
+    or set <PathToAnacondaRoot> and <PathToAnacondaRoot>/Scripts to the global Windows PATH variable. 
+    Troubleshooting note:  If working globally does not work, and working from the Anaconda root does, the problem is likely to depend on the environment variables.  
  3. Download and install the latest OpenCV distribution from here: http://opencv.org/downloads.html
  4. Manually copy the file opencv\build\python\2.7\xNN\cv2.pyd to the Lib\site-packages\ directory of your Python installation (where xXX is x86 or x64)
  5. Verify the installation (instructions below)
