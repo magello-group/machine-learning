@@ -1,13 +1,12 @@
-# machine-learning
-Machine Learning Meetup
+# Machine Learning
+Machine Learning - Meetup
 
 In this tutorial we will use the following development tools:
-
  * Python 2.7.x
  * Numpy 1.x
  * OpenCV 2.x
 
-## installation
+## Installation
 
 ### Windows
 
@@ -51,7 +50,7 @@ If they are owned by: "root   wheel" please take owenership of them by typing `s
 11. `pip install scikit-learn` 
 12. Verify the installation (instructions below)
 
-## Verify installation
+## Verify your installation
 
  * Run in terminal: `python`
  * Type: `import cv2`
