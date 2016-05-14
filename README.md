@@ -39,26 +39,26 @@ If they are owned by: "root   wheel" please take owenership of them by typing `s
 #### Procedure
 
  1. Install homebrew from: http://brew.sh/
- 2. Install python: 'brew install python'
+ 2. Install python: `brew install python`
  3. Open a new shell (to upgrade the path and environment)
- 4. Type: 'which python'
+ 4. Type: `which python`
  5. Make sure that the response is: 'usr/local/bin/python', otherwise retry...
- 6. Upgrade pip 'pip install --upgrade pip'
- 7. Install science tap in homebrew: 'brew tap homebrew/science/'
- 8. Install OpenCV: 'brew install opencv'
- 9. Install OpenCV python extensions: 'echo /usr/local/opt/opencv/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv.pth'
-10. pip install scipy
-11. pip install scikit-learn 
+ 6. Upgrade pip `pip install --upgrade pip`
+ 7. Install science tap in homebrew: `brew tap homebrew/science/`
+ 8. Install OpenCV: `brew install opencv`
+ 9. Install OpenCV python extensions: `echo /usr/local/opt/opencv/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv.pth`
+10. `pip install scipy`
+11. `pip install scikit-learn` 
 12. Verify the installation (instructions below)
 
 ## Verify installation
 
- * Run: 'python'
- * Type: 'import cv2'
- * Type: 'cv2.__version__'
+ * Run in terminal: `python`
+ * Type: `import cv2`
+ * Type: `cv2.__version__`
  * The result should be the version of OpenCV currently installed (2.x)
- * Verify scipy installation by typing: 'import scipy'
- * Verify scikit-learn installation by typing: 'import sklearn'
+ * Verify scipy installation by typing: `import scipy`
+ * Verify scikit-learn installation by typing: `import sklearn`
 If it doesn't work, try opening a new shell to make sure that the right defaults have been loaded!
 
 If it still doesn't work, please contact us so we can help!
