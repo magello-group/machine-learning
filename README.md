@@ -26,6 +26,18 @@ In this tutorial we will use the following development tools:
 
 We recommend installing Python and OpenCV using homebrew.
 
+#### Known Issues (Read before you continue!!)
+If you have updated OSX there is an issue with brew. 
+
+The OS takes owneship of some folders that brew uses if you have updated Mac OSX after installing brew.
+
+To check this pleas write ´´´ls -la /usr/local | grep -E "include|share"´´´
+
+If they are owned by: "root   wheel" please take owenership of them by typing ´´´sudo chown -R $USER:admin /usr/local/include´´´ and  ´´´sudo chown -R $USER:admin /usr/local/share´´´ respectivly.
+
+
+#### Procedure
+
  1. Install homebrew from: http://brew.sh/
  2. Install python: 'brew install python'
  3. Open a new shell (to upgrade the path and environment)
