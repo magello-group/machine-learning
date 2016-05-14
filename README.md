@@ -31,9 +31,9 @@ If you have updated OSX there is an issue with brew.
 
 The OS takes owneship of some folders that brew uses if you have updated Mac OSX after installing brew.
 
-To check this pleas write ´´´ls -la /usr/local | grep -E "include|share"´´´
+To check this pleas write `ls -la /usr/local | grep -E "include|share"`
 
-If they are owned by: "root   wheel" please take owenership of them by typing ´´´sudo chown -R $USER:admin /usr/local/include´´´ and  ´´´sudo chown -R $USER:admin /usr/local/share´´´ respectivly.
+If they are owned by: "root   wheel" please take owenership of them by typing `sudo chown -R $USER:admin /usr/local/include` and  `sudo chown -R $USER:admin /usr/local/share` respectivly.
 
 
 #### Procedure
