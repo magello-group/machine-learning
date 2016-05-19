@@ -11,16 +11,12 @@ def getFeature(example, label):
 	# Calculate a number of features and put them into an array.
 	# What features are relevant?
 	# Are there any missing features?
-	chars = countNumberOfChars(critique)
-	uniqueChars = countUniqueChars(critique)
+	chars = countNumberOfChars(example)
+	uniqueChars = countUniqueChars(example)
 	weightedUniqueChars = uniqueChars/chars
 
-	feature.append(chars)
-	feature.append(uniqueChars)
-	feature.append(weightedUniqueChars)
-
 	# Calculate some features based on the words 
-	counterForWords = wordCounter(critique)
+	counterForWords = wordCounter(example)
 	uniqueWords = countUniqueWords(counterForWords)
 	hasRepetition = checkForRepetition(counterForWords)
 
