@@ -54,6 +54,7 @@ if __name__ == '__main__':
 	# Lets create two sets of data! One for training and
 	# one for testing to see how good our algorithm was.
 	# But first shuffle the list so taht every run will be unique
+	# TODO remove the shuffle... What is the result and why!
 	random.shuffle(featureVector)
 
 	# Split in half, maybe test to change this limit!
