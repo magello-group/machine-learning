@@ -40,6 +40,7 @@ def make_np_array_XY(xy):
 	print y
 	return x,y
 
+
 if __name__ == '__main__':
 	reader = Reader()
 	# Read the data from out example files
@@ -64,13 +65,13 @@ if __name__ == '__main__':
 
 	# Lets create two sets of data! One for training and
 	# one for testing to see how good our algorithm was.
-	# But first shuffle the list
+	# But first shuffle the list so taht every run will be unique
 	random.shuffle(featureVector)
-	cut = int(len(featureVector)/2) # Split in half
-	XY_train = featureVector[:cut]
-	XY_test = featureVector[cut:]
+	cut = int(len(featureVector)/2) # Split in half, maybe test to change this limit!
+	trainData = featureVector[:cut]
+	testData = featureVector[cut:]
 
-	make_np_array_XY(XY_train)
+	make_np_array_XY(trainData)
 
 
 
