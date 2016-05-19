@@ -1,7 +1,6 @@
 from Reader import Reader
 from FeaturesUtilityFunctions import wordCounter, countUniqueChars, countNumberOfChars, countUniqueWords, checkForRepetition, extractDataAsNumPyArray, extractLabelAsNumPyArray
 import random 
-import numpy as np
 from sklearn import svm
 from sklearn.metrics import f1_score
 
