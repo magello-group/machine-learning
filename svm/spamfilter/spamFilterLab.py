@@ -45,7 +45,8 @@ if __name__ == '__main__':
 	# 'labels' should be an array with the same lenth as 'critiques' 
 	# populated with 0, one for each entry in 'badExamples'
 	# and 1 one for each entry in  'goodExamples' with 1. 
-	labels = [0]*len(badExamples) + [1]*len(goodExamples)
+	# TODO fix labels vector  according to the instruction above.
+	labels = ...
 
 	# Lets create the features we will use for analysis.
 	featureVector = []
@@ -81,6 +82,9 @@ if __name__ == '__main__':
 	#
 	# For very tiny values of C, you should get misclassified examples, 
 	# often even if your training data is linearly separable.
+
+	#TODO - try different values for C see what happens
+	#TODO - try a differnet kernel and see if the results are different. Check out the link above
 	C = 1.0
 	svc = svm.SVC(kernel='linear', C=C, verbose=False).fit(trainingData, trainingLable)
 	print 'Type of the support vector used: \n', type(svc)
@@ -93,8 +97,8 @@ if __name__ == '__main__':
 	# Get the predicition
 	predictedLable = svc.predict(evaluationData)
 
-	score = 0
 	# Let us evaluate the solution!
+	score = 0
 	for i in range(len(predictedLable)):
 		if predictedLable[i] == evaluationLable[i]:
 			score += 1
