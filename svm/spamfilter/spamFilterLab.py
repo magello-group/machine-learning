@@ -103,7 +103,7 @@ if __name__ == '__main__':
 	percentage =  (float(score) / len(predictedLable)) * 100
 
 	# Print results
-	print 'Got %s out of %s that is roughly %.2f %%' %(score, len(predictedLable), percentage)
+	print 'Got %s out of %s that is roughly %.2f %% correct.' %(score, len(predictedLable), percentage)
 
 	# The F1 score can be interpreted as a weighted average of the prediction and the actual data.
 	# F1 score reaches its best value at 1 and worst score at 0.

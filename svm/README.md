@@ -33,5 +33,13 @@ Thus the array found on row 49 should a an array of 0 and 1 that represent the e
 
 ### Play with the features
 
+There are some features that are calculated but not put in the features vector that you might want to add!
+
+Not only that but there are some other features that might be good to have. Try and think and figure out what characters a spam might have and try to calculate those features based on the information.
+
+Something that you also need to do is to check the features vector! There is some error in it that is related to rounding that makes one whole feature to be the same no matter what. Better check what is going on and how to fix it.
+
 
 ### Change the different input values for the svm algorithm
+
+So far you should have been using the input files 'good.txt' and 'bad.txt'. Try changing the input files to the larger files called 'badCritiques.txt' and 'goodCritiques.txt' and see what happend
