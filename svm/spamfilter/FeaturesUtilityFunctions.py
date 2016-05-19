@@ -39,3 +39,15 @@ def checkForRepetition(cnt):
 	return 0
 
 
+
+def extractDataAsNumPyArray(data):
+	a = np.array(data)
+	x = a[:,0:-1]
+	return x
+
+def extractLabelAsNumPyArray(data):
+	a = np.array(data)
+	y = a[:,-1]
+	return y
+
+

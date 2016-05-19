@@ -1,7 +1,9 @@
 from Reader import Reader
-from FeaturesUtilityFunctions import wordCounter, countUniqueChars, countNumberOfChars, countUniqueWords, checkForRepetition
+from FeaturesUtilityFunctions import wordCounter, countUniqueChars, countNumberOfChars, countUniqueWords, checkForRepetition, extractDataAsNumPyArray, extractLabelAsNumPyArray
 import random 
 import numpy as np
+from sklearn import svm
+from sklearn.metrics import f1_score
 
 
 def getFeature(critique, label):
@@ -31,16 +33,6 @@ def getFeature(critique, label):
 
 	return feature
 
-def make_np_array_XY(xy):
-	print "make_np_array_XY()"
-	a = np.array(xy)
-	x = a[:,0:-1]
-	print x
-	y = a[:,-1]
-	print y
-	return x,y
-
-
 if __name__ == '__main__':
 	reader = Reader()
 	# Read the data from out example files
@@ -67,11 +59,56 @@ if __name__ == '__main__':
 	# one for testing to see how good our algorithm was.
 	# But first shuffle the list so taht every run will be unique
 	random.shuffle(featureVector)
-	cut = int(len(featureVector)/2) # Split in half, maybe test to change this limit!
-	trainData = featureVector[:cut]
-	testData = featureVector[cut:]
 
-	make_np_array_XY(trainData)
+	# Split in half, maybe test to change this limit!
+	cut = int(len(featureVector)/2)
+	trainingSet = featureVector[:cut]
+	evaluationSet = featureVector[cut:]
+
+	# Extract the training data into numpy arrays so that we can use them for the machine learning algorithms.
+	trainingData = extractDataAsNumPyArray(trainingSet)
+	trainingLable = extractLabelAsNumPyArray(trainingSet)
+
+	# Check http://scikit-learn.org/stable/modules/svm.html#svm-kernels for more kernels or write your own!
+	#
+	# The C parameter tells the SVM optimization how much you want to avoid misclassifying each training
+	# example.
+	#
+	# For large values of C, the optimization will choose a smaller-margin hyperplane if that hyperplane
+	# does a better job of getting all the training points classified correctly.
+	#
+	# Conversely, a very small value of C will cause the optimizer to look for a larger-margin separating 
+	# hyperplane, even if that hyperplane misclassifies more points. 
+	#
+	# For very tiny values of C, you should get misclassified examples, 
+	# often even if your training data is linearly separable.
+	C = 1.0
+	svc = svm.SVC(kernel='linear', C=C, verbose=False).fit(trainingData, trainingLable)
+	print 'Type of the support vector used: \n', type(svc)
+	print 'Support Vector Classification: \n', svc
+
+	# Extract the evaluation data into numpy arrays so that we can use them for the machine learning algorithms.
+	evaluationData = extractDataAsNumPyArray(evaluationSet)
+	evaluationLable = extractLabelAsNumPyArray(trainingSet)
+
+	# Get the predicition
+	predictedLable = svc.predict(evaluationData)
+
+	score = 0
+	# Let us evaluate the solution!
+	for i in range(len(predictedLable)):
+		if predictedLable[i] == evaluationLable[i]:
+			score += 1
+
+	percentage =  (float(score) / len(predictedLable)) * 100
+
+	# Print results
+	print 'Got %s out of %s that is roughly %.2f %%' %(score, len(predictedLable), percentage)
+
+	# The F1 score can be interpreted as a weighted average of the prediction and the actual data.
+	# F1 score reaches its best value at 1 and worst score at 0.
+	f1 = f1_score(evaluationLable, predictedLable, average='binary') 
+	print f1
 
 
 
