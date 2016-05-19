@@ -11,7 +11,9 @@ The lab is broken in some ways. And part of the lab is working through and fixin
 Initially we are using 'bad.txt' and 'good.txt' as data sources but later one we will use bigger files that have more data and it will make it easier for our classifier to do a good job.
 
 If you have followed the previous instructions and have everything set-up for the lab you can run the program with:
-`python spamFilterLab.py` 
+`python spamFilterLab.py
+
+It will throws some errors but we will solve that soon.
 
 ## Instructions
 
