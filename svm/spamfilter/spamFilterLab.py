@@ -5,7 +5,7 @@ from sklearn import svm
 from sklearn.metrics import f1_score
 
 
-def getFeature(critique, label):
+def getFeature(example, label):
 	" construct feature vector" 
 	feature = []
 	# Calculate a number of features and put them into an array.
@@ -39,7 +39,7 @@ if __name__ == '__main__':
 	goodExamples = reader.read('good.txt', '|')
 
 	# Aggregate the data into one array
-	critiques = badExamples + goodExamples
+	examples = badExamples + goodExamples
 
 	# Label the data 0 for bad 1 for good
 	# 'labels' should be an array with the same lenth as 'critiques' 
@@ -49,8 +49,8 @@ if __name__ == '__main__':
 
 	# Lets create the features we will use for analysis.
 	featureVector = []
-	for i in range(len(critiques)):
-		feature = getFeature(critiques[i], labels[i])
+	for i in range(len(examples)):
+		feature = getFeature(examples[i], labels[i])
 		featureVector.append(feature)
 
 
