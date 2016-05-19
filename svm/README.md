@@ -30,6 +30,9 @@ For each of the data that we get when we read the file we need to label it to ei
 
 Thus the array found on row 49 should a an array of 0 and 1 that represent the examples array. 0 at every position we have a bad example and 1 for every position we have a good example.
 
+### Remove the random function
+
+There is a random function that shuffles the list. Why is it there? What would happen if you remove it?
 
 ### Play with the features
 
@@ -42,4 +45,4 @@ Something that you also need to do is to check the features vector! There is som
 
 ### Change the different input values for the svm algorithm
 
-So far you should have been using the input files 'good.txt' and 'bad.txt'. Try changing the input files to the larger files called 'badCritiques.txt' and 'goodCritiques.txt' and see what happend
+So far you should have been using the input files 'good.txt' and 'bad.txt'. Try changing the input files to the larger files called 'badCritiques.txt' and 'goodCritiques.txt' and see what happens.
