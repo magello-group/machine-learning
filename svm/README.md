@@ -46,3 +46,5 @@ Something that you also need to do is to check the features vector! There is som
 ### Change the different input values for the svm algorithm
 
 So far you should have been using the input files 'good.txt' and 'bad.txt'. Try changing the input files to the larger files called 'badCritiques.txt' and 'goodCritiques.txt' and see what happens.
+
+What happens if you add features such as length of the longest word, and the frequency of the top two or three most common words? 
