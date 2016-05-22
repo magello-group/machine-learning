@@ -21,3 +21,15 @@ But what happens when you have 3 and look at the evaluation later. Do you get 10
 What would be an appropriate number of centroids?
 
 ## Change the starting points of your centroids
+
+The inital locations are quite important. Try putting them all in the same location or randomly and see what happens.
+
+Also try to construct there where you think the center is and then see how the algorithm does.
+
+## Other things to do
+
+There are a few files you want to check out and look for TODO:s
+
+The file 'KMeans.py' the comment have some ordo notation that you should check out. It is not filled in at the moment but you should fill it in.
+
+Also the file 'Point.py' has a function that is used in the algorithm. This function is what is usually known as the cost function but what is the cost really? Is it an apropriate way of calculating cost? 

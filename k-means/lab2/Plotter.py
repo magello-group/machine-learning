@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 class Plotter(object):
-	"""docstring for Plotter"""
+	"""Plotter just to make plotting easy."""
 	def __init__(self, xAxis, yAxis):
 		self.xAxis = xAxis
 		self.yAxis = yAxis
