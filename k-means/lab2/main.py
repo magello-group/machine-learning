@@ -13,7 +13,7 @@ def loadData(fileName):
     First return value is the x values and the second one is the y values.
     """
 	data = np.loadtxt(fileName)
-	data = map(list, zip(* data))
+	data = map(list, zip(* data)) # Magic ;)
 	return (data[0], data[1])
 	
 
@@ -30,25 +30,34 @@ if __name__ == '__main__':
 	# Init the plotter with some axis parameters
 	plotter = Plotter([-20, 80], [-20, 80])
 
-	#Load data
+	# Load data
+	# TODO Try loading the smallDataSet.txt and see what happens.
+	# Try not to use the large data sets since the program will be quite slow
+	# If you want a different dataset talk to @Johan
 	trainingX, trainingY = loadData('testData.txt')
 
 	print "Init - show the data..."
+	# Just show the data
 	plotter.plotUnlabledData(trainingX, trainingY)
 	plotter.show()
 	raw_input('Press enter to continue')
 
 	# Define the centroids based on some points
 	print "Init - Create the first cluster points and plot them..."
+	# TODO here is where you change the number of centroids by adding or removing the points.
+	# The numbers represent the starting points of each centroid with the following coordinate pair: (x, y)
 	clusterPoints = [Point(2, 3), Point(35, 20), Point(40, 40), Point(60, 60), Point(30, 30)]
-	centroids = getCentroids(clusterPoints)
+	centroids = getCentroids(clusterPoints) # just convert the points to centroids for plotting and labeling assistance...
 	plotter.plotCentroids(centroids)
 	print "Init complete..."
 	raw_input('Press enter to continue and to start the algorithm.')
 
 	# Run the algorith 10 times
+	# TODO So right now we are running the algorithm 10 times. Maybe we should come up with some better meassurement?
 	for x in xrange(1,10):
 		# Get lables
+		print "Create the lables, this should take some time...."
+		# The interesting part is what is going on in the classify method.
 		labels = kmeans.classify(trainingX, trainingY, centroids)
 		# Plot the labled data
 		print "Plot the labled data."
@@ -68,7 +77,7 @@ if __name__ == '__main__':
 
 
 	raw_input("Trying out the clusters with some new data... press enter to continue")
-
+	# Here we just look as some different data.
 	rawDataX, rawDataY = loadData('largeDataSet.txt')
 	labels = kmeans.classify(rawDataX, rawDataY, centroids)
 	plotter.clear()

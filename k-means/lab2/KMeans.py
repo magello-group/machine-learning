@@ -2,7 +2,12 @@ from Centroid import Centroid
 from Point import Point
 
 def classify(x, y, centroids):
-	""" Returns lables """
+	"""
+	Returns lables
+	It is running in a sequential fashion for every one to see what is going on :)
+	This is where most time should be spend if you do optimize this.
+	O(??)
+	"""
 	lables = []
 	for j in xrange(0, len(x)):
 		closestDistance = centroids[0].point.distanceSquared(Point(x[j], y[j]))
@@ -19,6 +24,9 @@ def classify(x, y, centroids):
 
 
 def reCalculateCentroids(x, y, lables, centroids):
+	"""
+	O(??)
+	"""
 	
 	newX = [0]  * len(centroids)
 	newY = [0] * len(centroids)
@@ -33,6 +41,7 @@ def reCalculateCentroids(x, y, lables, centroids):
 	for index in xrange(0, len(centroids)):
 		oldCentroid = centroids[index]
 
+		# TODO why is this one here??? is this good?
 		if numberOfPoints[index] == 0:
 			newCentroid = Centroid(oldCentroid.point, oldCentroid.color, oldCentroid.lable)
 			newCentroids.append(newCentroid)
