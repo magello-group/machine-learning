@@ -13,6 +13,7 @@ def loadData(fileName):
     First return value is the x values and the second one is the y values.
     """
 	data = np.loadtxt(fileName)
+	data = map(list, zip(* data))
 	return (data[0], data[1])
 	
 
@@ -30,7 +31,7 @@ if __name__ == '__main__':
 	plotter = Plotter([-20, 80], [-20, 80])
 
 	#Load data
-	trainingX, trainingY = loadData('trainingData.txt')
+	trainingX, trainingY = loadData('testData.txt')
 
 	print "Init - show the data..."
 	plotter.plotUnlabledData(trainingX, trainingY)
