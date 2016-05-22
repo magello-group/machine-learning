@@ -77,10 +77,3 @@ if __name__ == '__main__':
 	
 	raw_input('Finished. Press enter to close.')
 
-
-
-
-
-
-
-
