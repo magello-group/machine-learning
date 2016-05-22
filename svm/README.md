@@ -49,12 +49,3 @@ So far you should have been using the input files 'good.txt' and 'bad.txt'. Try 
 
 What happens if you add features such as length of the longest word, and the frequency of the top two or three most common words?
 
-
-
-
-
-
-
-
-
-
