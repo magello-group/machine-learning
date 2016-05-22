@@ -48,7 +48,8 @@ If they are owned by: "root   wheel" please take owenership of them by typing `s
  9. Install OpenCV python extensions: `echo /usr/local/opt/opencv/lib/python2.7/site-packages >> /usr/local/lib/python2.7/site-packages/opencv.pth`
 10. `pip install scipy`
 11. `pip install scikit-learn` 
-12. Verify the installation (instructions below)
+12. `pip install matplotlib`
+13. Verify the installation (instructions below)
 
 ## Verify your installation
 
@@ -58,6 +59,7 @@ If they are owned by: "root   wheel" please take owenership of them by typing `s
  * The result should be the version of OpenCV currently installed (2.x)
  * Verify scipy installation by typing: `import scipy`
  * Verify scikit-learn installation by typing: `import sklearn`
+ * Verify matplot: `import matplotlib`
 If it doesn't work, try opening a new shell to make sure that the right defaults have been loaded!
 
 If it still doesn't work, please contact us so we can help!
