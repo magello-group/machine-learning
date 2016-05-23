@@ -31,7 +31,7 @@ ret, label, center = cv2.kmeans(
   # Input data
   data=Z,
   # Number of iterations
-  K=?4,
+  K=4,
   bestLabels=None,
   # Algorithm termination criteria. when to stop iterating (because centroids
   # are not moving anymore) and maximum iterations
