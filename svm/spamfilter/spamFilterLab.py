@@ -6,7 +6,7 @@ from sklearn.metrics import f1_score
 
 
 def getFeature(example, label):
-	" construct feature vector" 
+	"Construct feature vector" 
 	feature = []
 	# Calculate a number of features and put them into an array.
 	# What features are relevant?
@@ -37,11 +37,11 @@ if __name__ == '__main__':
 	# Aggregate the data into one array
 	examples = badExamples + goodExamples
 
-	# Label the data 0 for bad 1 for good
-	# 'labels' should be an array with the same lenth as 'critiques' 
+	# Label the data 0 for bad 1 for good examples.
+	# 'labels' should be an array with the same length as 'examples' 
 	# populated with 0, one for each entry in 'badExamples'
 	# and 1 one for each entry in  'goodExamples' with 1. 
-	# TODO fix labels vector  according to the instruction above.
+	# TODO Create a vector with labels according to the instruction above.
 	labels = ...
 
 	# Lets create the features we will use for analysis.
@@ -53,8 +53,8 @@ if __name__ == '__main__':
 
 	# Lets create two sets of data! One for training and
 	# one for testing to see how good our algorithm was.
-	# But first shuffle the list so taht every run will be unique
-	# TODO remove the shuffle... What is the result and why!
+	# But first shuffle the list so that every run will be unique
+	# TODO remove the shuffle... What is the result and why?
 	random.shuffle(featureVector)
 
 	# Split in half, maybe test to change this limit!
